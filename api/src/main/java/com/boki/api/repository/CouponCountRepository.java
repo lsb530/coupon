@@ -12,6 +12,12 @@ public class CouponCountRepository {
         this.redisTemplate = redisTemplate;
     }
 
+    public void cleanUp() {
+        redisTemplate
+                .delete("coupon_count");
+    }
+
+
     public Long increment() {
         return redisTemplate
                 .opsForValue()
