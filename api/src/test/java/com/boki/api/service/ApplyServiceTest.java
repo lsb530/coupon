@@ -48,6 +48,8 @@ class ApplyServiceTest {
 
         latch.await();
 
+        Thread.sleep(10_000);
+
         long couponCnt = couponRepository.count();
 
         assertEquals(100, couponCnt);
