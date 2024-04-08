@@ -23,7 +23,6 @@ public class ApplyService {
     public void apply(Long userId) {
         // couponCountRepository.cleanUp();
         Long couponCnt = couponCountRepository.increment();
-        System.out.println(couponCnt);
 
         if (couponCnt > 100) {
             return;
